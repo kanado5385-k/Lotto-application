@@ -1,1 +1,1 @@
-# Lotto-application
+# java-lotto-precourse
