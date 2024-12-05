@@ -12,7 +12,9 @@ public enum ErrorMessage implements SystemMessage {
     NOT_NATURAL_NUMBER("자연수가 아닌 숫자입니다. 다시 시도해주세요."),
     INVALID_WINNING_NUMBERS_QUANTITY("입력하신 당첨 번호 수량이 6개가 아닙니다. 다시 시도해주세요."),
     INVALID_WINNING_NUMBER("입력하신 당첨 번호 중에 1~45 범위를 벗어난 숫자가 있습니다. 다시 시도해주세요."),
-    DUPLICATE_WINNING_NUMBER("입력하신 당첨 번호 중에 중복이 있습니다. 다시 시도해주세요.");
+    DUPLICATE_WINNING_NUMBER("입력하신 당첨 번호 중에 중복이 있습니다. 다시 시도해주세요."),
+    INVALID_BONUS_NUMBER("입력하신 보너스 번호가 1~45 범위를 벗어났습니다. 다시 시도해주세요."),
+    DUPLICATE_BONUS_NUMBER("입력하신 보너스 번호가 당첨 번호들과 중복이 있습니다. 다시 시도해주세요.");
 
     private static final String ERROR_LOG_LEVEL = "[ERROR] ";
     private final String message;

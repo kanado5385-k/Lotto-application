@@ -26,4 +26,18 @@ public class WinningNumbersValidator {
             }
         }
     }
+
+    public static void validateBonusNumber(int bonusNumber, List<Integer> winningNumbers){
+        if ((bonusNumber < 1) || (bonusNumber > 45)) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_BONUS_NUMBER.getMessage());
+        }
+
+        HashSet<Integer> uniqueNumbers = new HashSet<>();
+        uniqueNumbers.add(bonusNumber);
+        for (Integer number : winningNumbers) {
+            if (!uniqueNumbers.add(number)) {
+                throw new IllegalArgumentException(ErrorMessage.DUPLICATE_BONUS_NUMBER.getMessage());
+            }
+        }
+    }
 }
