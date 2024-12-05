@@ -5,9 +5,12 @@ import java.util.List;
 public class Lotto {
     private final List<Integer> numbers;
 
-    public Lotto(List<Integer> numbers) {
-        validate(numbers);
+    private Lotto(List<Integer> numbers) {
         this.numbers = numbers;
+    }
+
+    public static Lotto createLotto(String numbers) {
+
     }
 
     private void validate(List<Integer> numbers) {
@@ -16,5 +19,4 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
 }
