@@ -2,21 +2,20 @@ package lotto.model;
 
 import java.util.List;
 
+import lotto.utilities.RandomGenerator;
+import lotto.validator.LottoValidator;
+
 public class Lotto {
     private final List<Integer> numbers;
 
-    private Lotto(List<Integer> numbers) {
+    public Lotto() {
+        List<Integer> numbers = RandomGenerator.lottoGenerator();
+        LottoValidator.validate(numbers);
         this.numbers = numbers;
     }
 
-    public static Lotto createLotto(String numbers) {
-        
-    }
-
-    private void validate(List<Integer> numbers) {
-        if (numbers.size() != 6) {
-            throw new IllegalArgumentException("[ERROR] 로또 번호는 6개여야 합니다.");
-        }
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 
 }

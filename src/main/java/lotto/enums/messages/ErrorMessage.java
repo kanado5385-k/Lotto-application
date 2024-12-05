@@ -9,7 +9,7 @@ public enum ErrorMessage implements SystemMessage {
     INVALID_INT_NUMBER("숫자가 아닌 것이 입력 되었습니다. 다시 시도해주세요."),
     INVALID_INPUT_MONEY("입력하신 금액이 0원 이상이여야합니다. 다시 시도해주세요."),
 
-    INVALID_INPUT_PRODUCT_NAME("존재하지 않는 상품입니다. 다시 입력해 주세요."),  
+    INVALID_LOTTO_QUANTITY("로또 번호는 6개여야 합니다. 다시 시도 해보겠습니다."),  
     NOT_NATURAL_NUMBER("자연수가 아닌 숫자입니다. 다시 시도해주세요."),
     
     PROBLEM_WITH_FILE("파일을 읽는 중 문제가 발생했습니다. 파일 경로와 파일 상태를 확인한 후 다시 시도해 주세요."),
