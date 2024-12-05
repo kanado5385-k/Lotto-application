@@ -10,7 +10,7 @@ public class Lotto {
     }
 
     public static Lotto createLotto(String numbers) {
-
+        
     }
 
     private void validate(List<Integer> numbers) {
