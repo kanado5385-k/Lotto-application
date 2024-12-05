@@ -13,6 +13,6 @@ public class AppConfig {
         ModelFactory modelFactory = new ModelFactory();
         ViewFactory viewFactory = new ViewFactory();
 
-        return new LottoController(domainFactory, serviceFactory, modelFactory, viewFactory);
+        return new LottoController(domainFactory, modelFactory, serviceFactory, viewFactory);
     }
 }
