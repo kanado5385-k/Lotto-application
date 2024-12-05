@@ -10,8 +10,8 @@ public class ModelFactory {
         return new Lotto();
     }
 
-    public Lottos createLottos(Money money) {
-        return new Lottos(money);
+    public Lottos createLottos(Money money, ModelFactory modelFactory) {
+        return new Lottos(money, modelFactory);
     }
 
     public Money createMoney(String inputMoney) {

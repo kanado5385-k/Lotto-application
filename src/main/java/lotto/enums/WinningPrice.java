@@ -17,13 +17,4 @@ public enum WinningPrice {
     public int getPrice() {
         return price;
     }
-
-    public static WinningPrice fromPrice(int price) {
-        for (WinningPrice type : WinningPrice.values()) {
-            if (type.price == price) {
-                return type;
-            }
-        }
-        throw new IllegalArgumentException("No matching WinningPrice for price: " + price);
-    }
 }

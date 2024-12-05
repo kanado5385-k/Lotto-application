@@ -14,7 +14,7 @@ public class Money {
     }
 
     public int getLottosQuantity() {
-        return inputMoney % LottoConstants.LTTO_PRICE.getLottoPrice();
+        return inputMoney / LottoConstants.LTTO_PRICE.getLottoPrice();
     }
 
     public int getInputMoney() {

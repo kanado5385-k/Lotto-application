@@ -3,7 +3,7 @@ package lotto.domain;
 public class ProfitCalculator implements ProfitCalculateStrategy {
     
     @Override
-    public Integer calculateProfitRate(int totalPrice, int money) {
-        return (totalPrice/money) % 100;
+    public double calculateProfitRate(int totalPrice, int money) {
+        return (double)((totalPrice/money) % 100);
     }
 }

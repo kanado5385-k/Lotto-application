@@ -1,7 +1,5 @@
 package lotto.controller;
 
-import org.junit.jupiter.api.Order;
-
 import lotto.dto.ProfitCalculatorDTO;
 import lotto.dto.WinningStatisticDTO;
 import lotto.factory.DomainFactory;
@@ -45,7 +43,7 @@ public class LottoController {
         WinningStatisticDTO winningStatisticDTO = lottoService.createWinningStatisticDTO(winningNumbers, lottos);
         outputView.printWinningStatistic(winningStatisticDTO);
 
-        ProfitCalculatorDTO profitCalculatorDTO = lottoService.createProfitCalculatorDTO(money);
+        ProfitCalculatorDTO profitCalculatorDTO = lottoService.createProfitCalculatorDTO(money, domainFactory);
         outputView.printProfitRate(profitCalculatorDTO);
 
     }
@@ -64,7 +62,7 @@ public class LottoController {
     private Lottos createLottos(Money money) {
         while (true) {
             try {
-                return modelFactory.createLottos(money);
+                return modelFactory.createLottos(money, modelFactory);
             } catch (IllegalArgumentException e) {
                 ExceptionOutputView.printErrorMessage(e.getMessage());
             }

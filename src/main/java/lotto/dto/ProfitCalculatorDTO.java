@@ -1,13 +1,13 @@
 package lotto.dto;
 
 public class ProfitCalculatorDTO {
-    private final Integer profitRate;
+    private final double profitRate;
 
-    public ProfitCalculatorDTO(Integer profitRate) {
+    public ProfitCalculatorDTO(double profitRate) {
         this.profitRate = profitRate;
     }
 
-    public Integer getProfitRate() {
+    public double getProfitRate() {
         return profitRate;
     }
 }
