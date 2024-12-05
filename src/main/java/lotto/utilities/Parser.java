@@ -1,5 +1,8 @@
 package lotto.utilities;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import lotto.enums.messages.ErrorMessage;
 
 public class Parser {
@@ -10,4 +13,16 @@ public class Parser {
             throw new NumberFormatException(ErrorMessage.INVALID_INT_NUMBER.getMessage());
         }
     }  
+
+    public static List<Integer> parseNumbersToInt(List<String> numbers) {
+        List<Integer> intNumbers = new LinkedList<Integer>();
+        for (String number : numbers) {
+              try {
+                  intNumbers.add(Integer.parseInt(number));
+              } catch (NumberFormatException e) {
+                  throw new IllegalArgumentException(ErrorMessage.INVALID_INT_NUMBER.getMessage());
+              }
+        }
+        return intNumbers;
+    }
 }
