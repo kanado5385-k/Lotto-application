@@ -1,8 +1,12 @@
 package lotto.enums.messages;
 
+import lotto.enums.constants.LottoConstants;
+
 public enum ErrorMessage implements SystemMessage {
-    INVALID_INPUT_MONEY("입력하신 금액의 단위가 올바르지 않습니다. 다시 입력해 주세요."),
-    
+    INVALID_INPUT_MONEY("입력하신 금액의 단위가"
+        + LottoConstants.LTTO_PRICE.getLottoPrice() 
+        + "아닙니다. 다시 입력해 주세요."),
+
     INVALID_INT_NUMBER("숫자가 아닌 것이 입력 되었습니다. 다시 시도해주세요."),
     INVALID_INPUT_ANSWER("잘못된 입력입니다. 다시 입력해 주세요."),
     INVALID_INPUT_PRODUCT_NAME("존재하지 않는 상품입니다. 다시 입력해 주세요."),  
